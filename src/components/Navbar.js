@@ -11,22 +11,22 @@ export default function HeaderNavbar({ headerRef }) {
       <Navbar expand="lg">
         <Container>
           <div class="justify-content-start d-flex">
-            <Navbar.Brand href="#home">Symmirror</Navbar.Brand>
+            <Navbar.Brand>Symmirror</Navbar.Brand>
           </div>
           <div class="justify-content-end d-flex">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="home">Home</Nav.Link>
+                <Nav.Link href="company">Company</Nav.Link>
                 <Nav.Link href="link">personal test</Nav.Link>
                 <NavDropdown title="personality types" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Prid</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Envy</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Wrath</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.4">Sloth</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.5">Greed</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.6">Gluttony</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.7">Lust</NavDropdown.Item>
+                  <NavDropdown.Item href="prid" activeClassName='active'>Prid</NavDropdown.Item>
+                  <NavDropdown.Item href="action/3.2">Envy</NavDropdown.Item>
+                  <NavDropdown.Item href="action/3.3">Wrath</NavDropdown.Item>
+                  <NavDropdown.Item href="action/3.4">Sloth</NavDropdown.Item>
+                  <NavDropdown.Item href="action/3.5">Greed</NavDropdown.Item>
+                  <NavDropdown.Item href="action/3.6">Gluttony</NavDropdown.Item>
+                  <NavDropdown.Item href="action/3.7">Lust</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
