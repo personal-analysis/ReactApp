@@ -8,7 +8,7 @@ export default function MainContent(){
     window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdDXOrxNPuRsOAWB7DYtjoemw2w3tTmmKZA7nCEIj0nEotVpA/viewform';
   }
   return(
-    <div id="MainContent">
+    <div id="MainContent" class="text-center">
       <div>
         <p>こちらをクリックで性格診断を行うgoogleformへ遷移できます</p>
       </div>

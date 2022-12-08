@@ -8,8 +8,8 @@ export default function Company() {
   return (
     <div class="App">
       <div clas="content">
-        <header classname="App_header">
-          <div class="header_content d-flex align-items-center"><HeaderNavbar /></div>
+        <header class="App_header">
+          <div><HeaderNavbar /></div>
         </header>
         <body class="App_body">
           <div class="main_content"><MainContent /></div>

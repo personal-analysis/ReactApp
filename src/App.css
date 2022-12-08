@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   height: 100vh;
   width:100vw;
 }
@@ -10,22 +9,19 @@
   }
 }
 
-.App-header {
-  padding:0 2vw;
-  height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 5vh;
-  position: fixed;
-  top: 0;
+.header_content{
+  width:100%;
+  height:8vh;
+  padding:1vh 0 1vh 0;
+}
+.top_box_shadow{
+  box-shadow:0 0 1vh 0 rgba(0, 0, 0, 0.4);
+  padding-bottom: 1vh;
 }
 
-.header_content{
-  height:10vh;
-  width:100%;
-  padding-left:0 2vw;
+.container{
+  max-width:none!important;
+  padding:0 2vw!important;
 }
 
 .main_content{
@@ -33,6 +29,7 @@
   height:90vh;
   padding-top: 0vh;
   background:linear-gradient(180deg, white, rgba(30, 208, 255, 0.5));
+  padding:0 2vw;
 }
 
 .analys_buttun{
@@ -61,6 +58,70 @@
   color:white;
 }
 
+.intro_content_top_text{
+  color:rgba(0,0,0,0.6);
+}
+
+.intro_support{
+  color:rgba(0,0,0,0.6);
+}
+
+.sticky_box{
+  position: sticky;
+  top: 0;
+}
+
+.intro_top{
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.intro_support{
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.container-fluid{
+  padding:0 1vw;
+}
+
+.intro_main_content {
+  display: flex;
+  margin-top: 1.5vh;
+}
+
+.block_conetnt{
+  background: rgba(0,0,0,0.1);
+  padding: 2.22vh 1.5vw;
+  border: 1px solid #fff;
+}
+
+.link-text{
+  display: block;
+  padding: 0.5vh 0 ;
+  font-size: 1rem;
+  color: rgba(0,0,0,0.55);
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  --bs-nav-link-hover-color: rgba(0,0,0,0.8);
+  --bs-nav-link-disabled-color: rgba(0,0,0,0.3);
+}
+
+.link-text:hover{
+  color: rgba(0,0,0,0.8);
+}
+
+.personal_main{
+  color: rgba(0,0,0,0.55);
+}
+
+.personal_top_text{
+  font-size: 1.5rem;
+}
+
+.personal_main_text{
+  margin:2vh 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -69,3 +130,4 @@
     transform: rotate(360deg);
   }
 }
+
