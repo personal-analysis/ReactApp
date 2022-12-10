@@ -11,7 +11,8 @@ import Lust from './pages/Lust.js'
 import Sloth from './pages/Sloth.js'
 import Wrath from './pages/Wrath.js'
 import Company from './pages/Company.js'
-import PersonalTest from './pages/Personaltest.js'
+import PersonalTest from './pages/Personaltest.jsx'
+import Firebasetest from './pages/Firebasetest.jsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
         <Route path="/lust" element={<Lust />} />
         <Route path="/sloth" element={<Sloth />} />
         <Route path="/wrath" element={<Wrath />} />
+
+        <Route path="/firebasetest" element={<Firebasetest />} />
       </Routes>
     </BrowserRouter>
   );

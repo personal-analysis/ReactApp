@@ -21,6 +21,7 @@ export default function HeaderNavbar({ headerRef }) {
                   <Nav.Link href="/">home</Nav.Link>
                   <Nav.Link href="company">Company</Nav.Link>
                   <Nav.Link href="personaltest">personal test</Nav.Link>
+                  <Nav.Link href="firebasetest">firebase test</Nav.Link>
                   <NavDropdown title="personality types" id="basic-nav-dropdown">
                     <NavDropdown.Item href="prid">Prid</NavDropdown.Item>
                     <NavDropdown.Item href="envy">Envy</NavDropdown.Item>

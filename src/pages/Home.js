@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HeaderNavbar from '../components/Navbar.js'
 import MainContent from '../components/main.js'
 
-export default function Company() {
+export default function Home() {
   return (
     <div class="App">
       <div clas="content">
