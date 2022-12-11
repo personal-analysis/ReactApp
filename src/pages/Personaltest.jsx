@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderNavbar from '../components/Navbar.js'
+import { Link } from 'react-router-dom';
 
 const RadioInput = ({spanname, labelname, label, value, checked, setter, inputname}) => {
 	return (
@@ -83,10 +84,28 @@ export default function Personaltest() {
 	const handleSubmit = e => {
 		e.preventDefault();
 		const data = {prid_1, prid_2,prid_3,prid_4,prid_5,humility_1, humility_2,humility_3,humility_4,humility_5,envy_1, envy_2,envy_3,envy_4,envy_5,gratitude_1, gratitude_2,gratitude_3,gratitude_4,gratitude_5,wrath_1, wrath_2,wrath_3,wrath_4,wrath_5,patience_1, patience_2,patience_3,patience_4,patience_5,sloth_1, sloth_2,sloth_3,sloth_4,sloth_5,diligence_1, diligence_2,diligence_3,diligence_4,diligence_5,greed_1, greed_2,greed_3,greed_4,greed_5,charity_1, charity_2,charity_3,charity_4,charity_5 ,gluttony_1, gluttony_2,gluttony_3,gluttony_4,gluttony_5 ,temperance_1, temperance_2,temperance_3,temperance_4,temperance_5 ,lust_1, lust_2,lust_3,lust_4,lust_5 ,chastity_1, chastity_2,chastity_3,chastity_4,chastity_5};
-		const json = JSON.stringify(data, null, 4);
+		const result_data = JSON.stringify(data, null, 4);
 		console.clear();
-		console.log(json);
+		console.log(result_data);
 	};
+  // const personalAnalyse = ({ statics:prid_1, prid_2,prid_3,prid_4,prid_5,humility_1, humility_2,humility_3,humility_4,humility_5,envy_1, envy_2,envy_3,envy_4,envy_5,gratitude_1, gratitude_2,gratitude_3,gratitude_4,gratitude_5,wrath_1, wrath_2,wrath_3,wrath_4,wrath_5,patience_1, patience_2,patience_3,patience_4,patience_5,sloth_1, sloth_2,sloth_3,sloth_4,sloth_5,diligence_1, diligence_2,diligence_3,diligence_4,diligence_5,greed_1, greed_2,greed_3,greed_4,greed_5,charity_1, charity_2,charity_3,charity_4,charity_5 ,gluttony_1, gluttony_2,gluttony_3,gluttony_4,gluttony_5 ,temperance_1, temperance_2,temperance_3,temperance_4,temperance_5 ,lust_1, lust_2,lust_3,lust_4,lust_5 ,chastity_1, chastity_2,chastity_3,chastity_4,chastity_5,prid,humility,envy,gratitude,wrath,patience,sloth,diligence,greed,charity,gluttony,temperance,lust,chastity}) => {
+  //   return (
+  //     prid=Number(prid_1)+ Number(prid_2)+Number(prid_3)+Number(prid_4)+Number(prid_5),
+  //     humility=Number(humility_1)+ Number(humility_2)+Number(humility_3)+Number(humility_4)+Number(humility_5),
+  //     envy=Number(envy_1)+ Number(envy_2)+Number(envy_3)+Number(envy_4)+Number(envy_5),
+  //     gratitude=Number(gratitude_1)+ Number(gratitude_2)+Number(gratitude_3)+Number(gratitude_4)+Number(gratitude_5),
+  //     wrath=Number(wrath_1)+ Number(wrath_2)+Number(wrath_3)+Number(wrath_4)+Number(wrath_5),
+  //     patience=Number(patience_1)+ Number(patience_2)+Number(patience_3)+Number(patience_4)+Number(patience_5),
+  //     sloth=Number(sloth_1)+ Number(sloth_2)+Number(sloth_3)+Number(sloth_4)+Number(sloth_5),
+  //     diligence=Number(diligence_1)+ Number(diligence_2)+Number(diligence_3)+Number(diligence_4)+Number(diligence_5),
+  //     greed=Number(greed_1)+ Number(greed_2)+Number(greed_3)+Number(greed_4)+Number(greed_5),
+  //     charity=Number(charity_1)+ Number(charity_2)+Number(charity_3)+Number(charity_4)+Number(charity_5),
+  //     gluttony=Number(gluttony_1)+ Number(gluttony_2)+Number(gluttony_3)+Number(gluttony_4)+Number(gluttony_5),
+  //     temperance=Number(temperance_1)+ Number(temperance_2)+Number(temperance_3)+Number(temperance_4)+Number(temperance_5),
+  //     lust=Number(lust_1)+ Number(lust_2)+Number(lust_3)+Number(lust_4)+Number(lust_5),
+  //     chastity=Number(chastity_1)+ Number(chastity_2)+Number(chastity_3)+Number(chastity_4)+Number(chastity_5)
+  //   );
+  // };
 	return (
     <div class="App container p-0">
       <div clas="content">
@@ -97,7 +116,6 @@ export default function Personaltest() {
           <div class="main_content">
             <div class="d-flex justify-content-center question_area">
                 <form onSubmit={handleSubmit}>
-
                   <div>
                     <div class="question_text">人に自慢できることがある</div>
                     <group class="inline-radio d-flex justify-content-center align-items-center">
@@ -150,7 +168,6 @@ export default function Personaltest() {
                       </div>
                     </group>
                   </div>
-
                   <div>
                     <div class="question_text">人にものを教えるのが得意だ</div>
                     <group class="inline-radio d-flex justify-content-center align-items-center">
@@ -775,7 +792,6 @@ export default function Personaltest() {
                       </div>
                     </group>
                   </div>
-                  
                   <div>
                     <div class="question_text">ダイエットに成功したことがある</div>
                     <group class="inline-radio d-flex justify-content-center align-items-center">
@@ -828,7 +844,11 @@ export default function Personaltest() {
                       </div>
                     </group>
                   </div>
-                  <button type="submit">Submit</button>
+                  <div class="d-flex justify-content-center">
+                    <Link to='/result' state={{ prid_1:prid_1,prid_2:prid_2,prid_3:prid_3,prid_4:prid_4,prid_5:prid_5,humility_1:humility_1,humility_2:humility_2,humility_3:humility_3,humility_4:humility_4,humility_5:humility_5,envy_1:envy_1,envy_2:envy_2,envy_3:envy_3,envy_4:envy_4,envy_5:envy_5,gratitude_1:gratitude_1,gratitude_2:gratitude_2,gratitude_3:gratitude_3,gratitude_4:gratitude_4,gratitude_5:gratitude_5,wrath_1:wrath_1,wrath_2:wrath_2,wrath_3:wrath_3,wrath_4:wrath_4,wrath_5:wrath_5,patience_1:patience_1,patience_2:patience_2,patience_3:patience_3,patience_4:patience_4,patience_5:patience_5,sloth_1:sloth_1,sloth_2:sloth_2,sloth_3:sloth_3,sloth_4:sloth_4,sloth_5:sloth_5,diligence_1:diligence_1,diligence_2:diligence_2,diligence_3:diligence_3,diligence_4:diligence_4,diligence_5:diligence_5,greed_1:greed_1,greed_2:greed_2,greed_3:greed_3,greed_4:greed_4,greed_5:greed_5,charity_1:charity_1,charity_2:charity_2,charity_3:charity_3,charity_4:charity_4,charity_5:charity_5,gluttony_1:gluttony_1,gluttony_2:gluttony_2,gluttony_3:gluttony_3,gluttony_4:gluttony_4,gluttony_5:gluttony_5,temperance_1:temperance_1,temperance_2:temperance_2,temperance_3:temperance_3,temperance_4:temperance_4,temperance_5:temperance_5,lust_1:lust_1,lust_2:lust_2,lust_3:lust_3,lust_4:lust_4,lust_5:lust_5,chastity_1:chastity_1,chastity_2:chastity_2,chastity_3:chastity_3,chastity_4:chastity_4,chastity_5:chastity_5, }}>
+                      <button class="btn btn-secondary btn-lg"type="submit">Submit</button>
+                    </Link>
+                  </div>
               </form>
             </div>
           </div>
@@ -838,10 +858,3 @@ export default function Personaltest() {
 	);
 };
 
-<script>
-{/* if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-} */}
-</script>
